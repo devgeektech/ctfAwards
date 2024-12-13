@@ -11,6 +11,7 @@
     <main class="main-content position-relative border-radius-lg ">
         @include('layouts.admin.nav')
         @yield('content')
+        @include('layouts.admin.footer')
     </main>
     @include('layouts.admin.scripts')
 </body>

@@ -12,15 +12,18 @@ class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $table = "wp_users";
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        // 'name',
+        // 'email',
+        'user_login',
+        'user_pass',
+        // 'password',
     ];
 
     /**
@@ -29,8 +32,9 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        // 'password',
+        'user_pass',
+        // 'remember_token',
     ];
 
     /**
@@ -39,7 +43,8 @@ class User extends Authenticatable
      * @var array<string, string>
      */
     protected $casts = [
-        'email_verified_at' => 'datetime',
-        'password' => 'hashed',
+        // 'email_verified_at' => 'datetime',
+        // 'password' => 'hashed',
+        'user_pass' => 'hashed',
     ];
 }

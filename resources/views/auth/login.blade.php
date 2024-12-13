@@ -15,27 +15,27 @@
                     <!-- Email Address -->
                     <div class="mb-3">
                         {{-- <x-input-label for="email" :value="__('Email')" /> --}}
-                        <x-text-input id="email" class="block mt-1 w-full" type="email" aria-label="Email"
-                            name="email" :placeholder="__('Email')" :value="old('email')" required autofocus
-                            autocomplete="username" />
-                        <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                        <x-text-input id="user_login" class="block mt-1 w-full" type="text" aria-label="user_login"
+                            name="user_login" :placeholder="__('Username')" :value="old('user_login')" required autofocus
+                            autocomplete="user_login" />
+                        <x-input-error :messages="$errors->get('user_login')" class="mt-2" />
                     </div>
 
                     <!-- Password -->
                     <div class="mb-3">
                         {{-- <x-input-label for="password" :value="__('Password')" /> --}}
 
-                        <x-text-input id="password" class="block mt-1 w-full" type="password" name="password"
-                            :placeholder="__('Password')" required autocomplete="current-password" />
+                        <x-text-input id="user_pass" class="block mt-1 w-full" type="password" name="user_pass"
+                            :placeholder="__('Password')" required />
 
-                        <x-input-error :messages="$errors->get('password')" class="mt-2" />
+                        <x-input-error :messages="$errors->get('user_pass')" class="mt-2" />
                     </div>
 
                     <!-- Remember Me -->
-                    <div class="form-check form-switch">
+                    {{-- <div class="form-check form-switch">
                         <input class="form-check-input" type="checkbox" id="rememberMe">
                         <label class="form-check-label" for="rememberMe">Remember me</label>
-                    </div>
+                    </div> --}}
                     {{-- <div class="block mt-4">
             <label for="remember_me" class="inline-flex items-center">
                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:ring-indigo-500" name="remember">
@@ -51,7 +51,7 @@
                             </x-primary-button>
                         </div>
                     </div>
-                    <p class="mt-2 text-sm text-center">
+                    {{-- <p class="mt-2 text-sm text-center">
                         @if (Route::has('password.request'))
                             <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none text-primary focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 px-2"
                                 href="{{ route('password.request') }}">
@@ -65,7 +65,7 @@
                             <a href="{{ route('register') }}" class="text-primary text-gradient font-weight-bold">Sign
                                 up</a>
                         </p>
-                    </div>
+                    </div> --}}
                 </form>
             </div>
         </div>
